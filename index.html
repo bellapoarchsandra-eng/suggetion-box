@@ -1,40 +1,215 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My first site</title>
+    <title>King David Academy: Celebrating Excellence</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --kda-gold: #FFC107;
+            --kda-dark: #004d40;
+            --kda-light: #e0f2f1;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--kda-light);
+        }
+        .achievement-card {
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+            cursor: pointer;
+            border-left: 8px solid var(--kda-gold);
+        }
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 77, 64, 0.2);
+        }
+        .hero-banner {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://placehold.co/1200x400/004d40/ffffff?text=KDA+Achievement+Banner');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
 <body>
-<h1>LITTLE HANDS,BIG CURIOSITY</h1>
-<P>When I was just eleven years old, my world changed forever the day my parents brought home a sleek, 
-    brand-new PlayStation 4. It sat quietly in the living room, its smooth black surface gleaming under 
-    the warm glow of the lamps, like a treasure waiting to be discovered. The soft hum it made when 
-    powered on filled the room with excitement and promise. I was instantly captivated—not just
-     by the games it could play or the colorful adventures it offered, but by the mysterious machine
-      itself. It was unlike anything I had seen before, a tiny universe of technology humming quietly,
-       inviting me to explore its secrets.</P>
-   <P>That night, after the house had fallen into deep silence and everyone else was sound asleep, 
-    I found myself wide awake, unable to resist the irresistible urge to sneak out of bed and get a closer
-     look. Quietly, I tiptoed to the living room where the PS4 sat, its gentle blue light shining softly
-      in the dark. I rummaged through the toolbox and found a small screwdriver—the perfect tool for
-       my midnight mission. With cautious hands and pounding heart, I carefully began taking the console 
-       apart, piece by piece. Each circuit board, chip, and tangled wire inside fascinated me like
-        fragments of a secret puzzle waiting to be solved. The soft glow from the console’s inner 
-        components cast dancing shadows around the room as I studied every tiny part, my eyes wide
-         with wonder and curiosity..</P>   
-         <P>Of course, I was far too young and inexperienced to put it back together correctly, 
-            and the console remained open and silent by the time morning light crept through the windows. 
-            But that didn’t matter. That night ignited a spark deep inside me—a relentless curiosity 
-            and a passion for understanding how things work. It was more than just dismantling a machine;
-             it was the beginning of a lifelong journey fueled by wonder, discovery, and the joy 
-             of figuring things out. From that moment on, I knew I wanted to explore, create, and never
-              stop learning. </P>
-              <img src="Screenshot_22-9-2025_62433_as1.ftcdn.net.jpeg" alt="image" height="600px" width="600px"
-             <textarea placeholder="kindly provide your feed back !"></textarea>
-              <button>Click me !</button>
 
-              <br>
- </body>
-</html   
+    <!-- Header & Navigation -->
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-white tracking-wider">
+                KDA <span class="text-yellow-400">Excellence</span>
+            </h1>
+            <nav class="space-x-4">
+                <a href="#academics" class="text-white hover:text-yellow-400 transition duration-300 font-medium">Academics</a>
+                <a href="#culture" class="text-white hover:text-yellow-400 transition duration-300 font-medium">Culture & Sports</a>
+                <a href="#counters" class="text-white hover:text-yellow-400 transition duration-300 font-medium">Statistics</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-banner py-20 text-center text-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-5xl font-extrabold mb-4 animate-pulse">
+                "We Are The Light"
+            </h2>
+            <p class="text-xl font-light mb-8">
+                Celebrating the outstanding academic, cultural, and moral achievements that define King David Academy.
+            </p>
+            <a href="#academics" class="inline-block bg-yellow-400 text-gray-900 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-500 transition duration-300 transform hover:scale-105">
+                Explore Achievements
+            </a>
+        </div>
+    </section>
+
+    <!-- Achievement Counters Section -->
+    <section id="counters" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h3 class="text-4xl font-extrabold text-gray-800 mb-12">Our Impact in Numbers</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Counter 1 -->
+                <div class="p-6 bg-green-50 rounded-xl shadow-md border-t-4 border-yellow-400">
+                    <div class="text-6xl font-extrabold text-yellow-500 mb-2" id="exam-percent">0</div>
+                    <p class="text-xl font-semibold text-gray-700">High National Exam Pass Rate</p>
+                </div>
+                <!-- Counter 2 -->
+                <div class="p-6 bg-green-50 rounded-xl shadow-md border-t-4 border-yellow-400">
+                    <div class="text-6xl font-extrabold text-yellow-500 mb-2" id="competition-year">0</div>
+                    <p class="text-xl font-semibold text-gray-700">Cultural Championship Won</p>
+                </div>
+                <!-- Counter 3 -->
+                <div class="p-6 bg-green-50 rounded-xl shadow-md border-t-4 border-yellow-400">
+                    <div class="text-6xl font-extrabold text-yellow-500 mb-2" id="programs-count">0</div>
+                    <p class="text-xl font-semibold text-gray-700">International Programs Offered</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Achievements -->
+    <section id="academics" class="py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h3 class="text-4xl font-extrabold text-gray-800 text-center mb-10">Academic Milestones 📚</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Card 1: National Exam -->
+                <div class="achievement-card p-6 bg-white rounded-xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="text-4xl text-yellow-600 mr-4">💡</span>
+                        <h4 class="text-2xl font-bold text-gray-800">Exceptional National Exam Results</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Consistently high performance, with **over 90%** of our students achieving top scores in national examinations, setting a benchmark for excellence in the region.
+                    </p>
+                    <span class="text-sm font-semibold text-gray-500">Focus: Primary & Secondary (REB)</span>
+                </div>
+
+                <!-- Card 2: Cambridge -->
+                <div class="achievement-card p-6 bg-white rounded-xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="text-4xl text-yellow-600 mr-4">🌐</span>
+                        <h4 class="text-2xl font-bold text-gray-800">Global Curriculum Mastery</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Our students excel in the **Cambridge IGCSE and A-Level** curricula, ensuring they are competitive and prepared for university admissions worldwide.
+                    </p>
+                    <span class="text-sm font-semibold text-gray-500">Programs: Cambridge, Edexcel, BTEC</span>
+                </div>
+
+                <!-- Card 3: IB Candidacy -->
+                <div class="achievement-card p-6 bg-white rounded-xl shadow-lg">
+                    <div class="flex items-center mb-3">
+                        <span class="text-4xl text-yellow-600 mr-4">🚀</span>
+                        <h4 class="text-2xl font-bold text-gray-800">IB World School Aspirations</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        We are currently in candidacy for the **International Baccalaureate (IB) Programme**, underscoring our commitment to rigorous, globally-minded education.
+                    </p>
+                    <span class="text-sm font-semibold text-gray-500">Future Ready: Global Impact</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Achievements -->
+    <section id="culture" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <h3 class="text-4xl font-extrabold text-gray-800 text-center mb-10">Cultural & Co-Curricular Success 🏆</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Card 4: Culture Competition Highlight -->
+                <div class="achievement-card p-8 bg-white rounded-xl shadow-2xl border-l-8 border-yellow-600 transform hover:scale-105 transition duration-500">
+                    <div class="flex items-center mb-4">
+                        <span class="text-5xl text-red-600 mr-4">🥇</span>
+                        <h4 class="text-3xl font-extrabold text-gray-900">2024 National Culture Champions</h4>
+                    </div>
+                    <p class="text-lg text-gray-700 font-medium mb-4">
+                        **King David Academy won the 2024 National Competition on Culture, Values, and Heritage!** This significant victory demonstrates our students' deep connection to Rwandan identity and values.
+                    </p>
+                    <span class="text-sm font-semibold text-red-500">Event: Culture & Heritage Competition, May 2024</span>
+                </div>
+
+                <!-- Card 5: Sports -->
+                <div class="achievement-card p-8 bg-white rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <span class="text-4xl text-yellow-600 mr-4">⚽</span>
+                        <h4 class="text-2xl font-bold text-gray-800">Robust Sports Program</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        We provide extensive opportunities for students to excel in various physical activities, including **Football, Basketball, Volleyball, and American Football**, promoting holistic development.
+                    </p>
+                    <span class="text-sm font-semibold text-gray-500">Focus: Physical Excellence and Teamwork</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-lg font-semibold mb-2">King David Academy - Educating with Light & Leadership</p>
+            <p class="text-sm text-gray-400">&copy; 2025 KDA Achievements Showcase. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for the counter animation
+        function animateCounter(id, targetValue, duration) {
+            const element = document.getElementById(id);
+            if (!element) return;
+            let start = 0;
+            const startTime = performance.now();
+            
+            function step(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                let currentValue = Math.floor(progress * targetValue);
+                
+                if (id === 'exam-percent') {
+                    element.textContent = currentValue + '%';
+                } else if (id === 'competition-year') {
+                    element.textContent = currentValue;
+                } else {
+                    element.textContent = currentValue;
+                }
+
+                if (progress < 1) {
+                    requestAnimationFrame(step);
+                }
+            }
+            requestAnimationFrame(step);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Target values and animation durations
+            animateCounter('exam-percent', 90, 1500); // 90%
+            animateCounter('competition-year', 2024, 2500); // 2024 win
+            animateCounter('programs-count', 6, 1000); // Cambridge, BTEC, REB, IB Candidacy, ICDL, SAT
+        });
+    </script>
+</body>
+</html>
